@@ -34,7 +34,7 @@ header a:visited {
     background-image: url("../img/bg-texture-set.png");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: auto;
 }
 
 .header-contact a {
@@ -278,11 +278,15 @@ header ul {
     background-color: #fff;
 }
 
-.navigation-list li {
+nav {
+    position: relative;
+}
+
+.navigation-lvl-1>li {
     display: inline-block;
 }
 
-.navigation-list a {
+.navigation-lvl-1>li>a {
     display: inline-block;
     padding: 23px 40px 22px;
     font-weight: 700;
@@ -291,12 +295,52 @@ header ul {
     transition: 0.2s;
 }
 
-.navigation-list li:first-child a {
+.navigation-lvl-1 li:first-child a {
     padding-left: 0;
 }
 
-.navigation-list a:hover {
+.navigation-lvl-1>li>a:hover {
     border-bottom: 2px solid #dc363d;
+}
+
+.navigation-lvl-2 {
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.45);
+    background-color: #fff;
+    padding: 8px 20px 12px;
+    position: absolute;
+    top: 63px;
+    left: 0;
+    width: 100%;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.navigation-lvl-2-cat {
+    padding: 15px 15px 0px 0px;
+    flex-direction: column;
+    align-items: flex-start;
+    display: inline-block;
+}
+
+.navigation-lvl-2-cat>a {
+    text-transform: uppercase;
+    color: #ce2e2a;
+    font-weight: 700;
+}
+
+.navigation-lvl-3 li>a {
+    transition: 0.3s;
+}
+
+.navigation-lvl-3 li>a:hover {
+    background-color: #dddddd;
+    color: #ce2e2a;
+}
+
+.navigation-lvl-3 li>a {
+    display: block;
+    font-weight: 700;
+    margin: 6px 0;
 }
 
 .breadcrumbs {
@@ -316,4 +360,8 @@ header ul {
 
 .breadcrumbs a:hover {
     font-weight: 700;
+}
+
+.nav-hidden {
+    display: none;
 }
