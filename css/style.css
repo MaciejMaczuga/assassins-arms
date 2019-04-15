@@ -1,0 +1,61 @@
+.header-contact-wrapper {
+    width: 100%;
+    background-color: #2e2e2e;
+}
+
+.header-contact {
+    height: 40px;
+}
+
+.header-contact a {
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 11px;
+    margin-right: 45px;
+}
+
+.header-contact-tel::before {
+    content: "";
+    display: inline-block;
+    background-image: url("../img/telephone.png");
+    width: 11px;
+    height: 11px;
+    vertical-align: baseline;
+    margin-right: 7px;
+}
+
+.header-contact-mail::before {
+    content: "";
+    display: inline-block;
+    background-image: url("../img/mail-black-envelope-symbol.png");
+    width: 11px;
+    height: 8px;
+    vertical-align: baseline;
+    margin-right: 7px;
+}
+
+.header-contact-fb::before {
+    content: "";
+    display: inline-block;
+    background-image: url("../img/facebook-logo.png");
+    width: 6px;
+    height: 11px;
+    vertical-align: baseline;
+    margin-right: 7px;
+}
+
+header ul {
+    list-style: none;
+}
+
+
+/* .full-width {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+} */
