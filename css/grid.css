@@ -17,6 +17,10 @@ html {
     align-self: flex-start;
 }
 
+.wrapper {
+    width: 100%;
+}
+
 [class*="col-"] {
     display: flex;
 }
@@ -127,7 +131,6 @@ p {
 }
 
 @media only screen and (max-width: 768px) {
-    /* For mobile phones: */
     .container {
         width: 100%;
         margin: 0 auto;
