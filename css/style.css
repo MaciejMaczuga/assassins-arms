@@ -517,6 +517,10 @@ main > .container {
 .red {
     text-transform: uppercase;
     color: #c32c12;
+    transition: 0.3;
+}
+.red:hover{
+    color: #1a1a1a;
 }
 .strong {
     font-weight: bold;
@@ -578,10 +582,10 @@ del {
 .cash-circle {
     display: block;
     width: 36px;
-    height: 35px;
+    height: 36px;
     background-image: url('../img/arrow_return.png');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto;
     background-position: center;
 }
 .negotation-offer {
@@ -637,32 +641,113 @@ del {
 .perks-section p {
     padding: 10px 0 0 15px;
 }
-/* .icon-truck {
-    background-image: url('../img/truck.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+.section-title {
+    color: #272626;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase; 
+    padding: 0 0 20px 0;
 }
-.icon-return {
-    background-image: url('../img/return.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+.logo-bullet {
+    vertical-align: middle;
 }
-.icon-medal {
-    background-image: url('../img/medal.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+.item-photo img {
+    margin: 0 auto;
 }
-.icon-percent {
-    background-image: url('../img/percent.png');
+.rec-item-desc {
+    flex-direction: column;
+    align-items: flex-start;
+    color: #272626;
+    padding: 15px 0;
+}
+.rec-item-desc p {
+    font-size: 11px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.rec-item-desc strong {
+    padding-top: 13px;
+    font-size: 16px;
+    font-weight: 700;
+}
+.recommended-item {
+    padding: 15px 10px;
+}
+.recommended-item:not(last-child) .rec-item-desc {
+    border-right: 1px solid #ebebeb;
+}
+.product-article {
+    flex-direction: column;
+    align-items: flex-start;
+}
+.product-pros {
+    list-style: none;
+    padding: 37px 0 10px 0; 
+}
+.product-pros li {
+    padding: 6px 0;
+}
+.subsection-title {
+    color: #2e2e2e;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 45px 0 0 0;
+}
+.faq-question {
+    cursor: pointer;
+    color: #2e2e2e;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 20px 0;
+    border-bottom: 1px solid #e2e2e2;
+}
+.faq-question:focus {
+    outline: none;
+}
+.faq-question img {
+    float: right;
+    padding: 5px 10px 0 0;
+    vertical-align: middle;
+}
+.faq-anserw {
+    font-size: 11px;
+    padding: 14px 0;
+    line-height: 14px;
+}
+.no-flex {
+    display: initial;
+}
+.more-question {
+    /* color: #2e2e2e;
+    font-size: 13px;
+    font-weight: 700; */
+    padding: 40px 0 20px;
+}
+.more-question .subsection-title {
+    padding: 0;
+}
+.red-button-small {
+    color: #fff;
+    width: 218px;
+    height: 42px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-image: url('../img/btn-bg-2.png');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
-} */
+    background-size: auto;
+    margin: 0 auto;
+    border: none;
+    transition: 0.3s;
+}
+.red-button-small:hover {
+    opacity: 0.8;
+}
+.aside-banner {
 
-
+}
 @media screen and (min-width: 1200px) {
     .search-wrapper input{width: 300px}
     .my-basket a::before {
@@ -671,6 +756,9 @@ del {
     }
     .basket-links span:last-child {
         font-size: 20px;
+    }
+    .chose-a-set {
+        padding: 110px 0 50px;
     }
 }
 @media only screen and (max-width: 979px) {
