@@ -34,7 +34,7 @@ header a:visited {
 
 .header-backgrounds {
     background-color: #eaeaea;
-    background-image: url("../img/bg-texture-set.png");
+    background-image: url("../img/header-bg.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: auto;
@@ -650,6 +650,7 @@ del {
 }
 .logo-bullet {
     vertical-align: middle;
+    padding-right: 10px;
 }
 .item-photo img {
     margin: 0 auto;
@@ -694,6 +695,7 @@ del {
     text-transform: uppercase;
     padding: 45px 0 0 0;
 }
+
 .faq-question {
     cursor: pointer;
     color: #2e2e2e;
@@ -737,7 +739,7 @@ del {
     background-image: url('../img/btn-bg-2.png');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: auto;
+    background-size: cover;
     margin: 0 auto;
     border: none;
     transition: 0.3s;
@@ -745,10 +747,141 @@ del {
 .red-button-small:hover {
     opacity: 0.8;
 }
+.article-subject-details {
+    flex-direction: column;
+    padding-left: 6px;
+}
 .aside-banner {
+    color: #fff;
+    background-color: #e01a4e;
+    background-image: url('../img/sml-banner.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    padding:25px 0px 26px 100px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.aside-banner .caps {
+    font-size: 16px;
+}
+.aside-banner .small {
+    font-size: 12px;
+}
+.btn-white {
+    width: 132px;
+    padding: 4px 0;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.3s;
+    border: 1px solid #ffffff;
+    margin-top: 10px;
+    text-align: center;
+}
+.btn-white:hover {
+    background-color: #fff;
+    color: #b62323;
+}
+.details{
+    text-align: left;
+    padding: 39px 30px 29px 25px;
+    box-shadow: 0px 2px 10px 0px rgba(230,230,230,1);
+    position: relative;
+    background-color: #fff;
+}
+.about-product {
+    align-items: flex-start;
+}
+.specification {
+    list-style: none;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.specification li {
+    display: block;
+    font-size: 10px;
+    padding: 5px 0 7px;
+}
+.specification li b {
+    font-size: 12px;
+    display: block;
+    text-transform: uppercase;
+    display: block;
+    padding: 2px 0 2px;
+}
+.details::after {
+    content: "";
+    position: absolute;
+    background-image: url('../img/kleks.png');
+    background-repeat: no-repeat;
+    background-size: inherit;
+    z-index: -1;
+    width: 400px;
+    height: 385px;
+    background-position: center;
+}
+.blog {
+    padding: 80px 0 40px;
+    flex-direction: column;
+}
+.post-title {
+    font-size:16px;
+    color: #231f20;
+    padding: 16px 0;
+}
+.popular-posts article a{
+    flex-wrap: wrap;
+}
+.popular-posts article {
+    padding-bottom: 20px;
+    transition: 0.3s;
+}
+.post-intro {
+    color: #231f20;
+    line-height: 23px;
+    font-size: 14px;
+    font-family: 'Arial MT';
+    font-weight: 400;
+    padding: 27px 0 18px 30px;
+}
+.popular-posts article:last-child {
+    padding: 0 0 20px 15px;
+}
+footer {
+    background-image: url(../img/bf-footer-dark.png), url(../img/mountains.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center top;
 
 }
+.footer-nav {
+    background-color: #171717;
+    color: #e0dcdc;
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 400;
+}
+.footer-title {
+    color: #ffffff;
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.85px;
+    text-transform: uppercase;
+    letter-spacing: 0.58px;
+}
 @media screen and (min-width: 1200px) {
+    footer {
+        padding-top: 300px;
+    }
+    .details::after {
+        width: 430px;
+        height: 430px;
+        background-position: center;
+        bottom: -135px;
+        left: -49px;
+    }
     .search-wrapper input{width: 300px}
     .my-basket a::before {
         top: -65px;
