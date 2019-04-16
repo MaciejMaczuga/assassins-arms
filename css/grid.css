@@ -23,6 +23,7 @@ html {
 
 [class*="col-"] {
     display: flex;
+    vertical-align: middle;
 }
 
 .row {

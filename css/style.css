@@ -499,6 +499,10 @@ main > .container {
     flex-direction: row;
     align-items: flex-start;
 }
+.product-availability div:last-child a{
+    width: 100%;
+    text-align: right;
+}
 .product-amount {
     flex-direction: column;
 }
@@ -515,8 +519,10 @@ main > .container {
     color: #c32c12;
 }
 .strong {
-    text-transform: uppercase;
     font-weight: bold;
+}
+.caps {
+    text-transform: uppercase;
 }
 .product-basket {
     padding: 27px 0 18px;
@@ -569,6 +575,94 @@ del {
 .red-button:hover {
     opacity: 0.8;
 }
+.cash-circle {
+    display: block;
+    width: 36px;
+    height: 35px;
+    background-image: url('../img/arrow_return.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.negotation-offer {
+    justify-content: space-between;
+}
+.negotiate {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 13px;
+}
+.negotiate-dare {
+    font-size: 14px;
+    font-weight: 700;
+}
+.perks-section {
+    border: 1px solid #ebebeb;
+    margin-top: 20px;
+    padding: 25px 0 5px 0;
+    flex-wrap: wrap;
+    position: relative;
+}
+.perks-section:before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-top: 1px solid #ebebeb;
+    border-right: 0 solid #ebebeb;
+    border-bottom: 0 solid #ebebeb;
+    border-left: 1px solid #ebebeb;
+    top: -11px;
+    left: 89%;
+    transform: rotate(45deg);
+    background-color: #fff;
+}
+.perks-section > div p {
+    padding: 0 0 15px 10px;
+    font-size: 11px;
+}
+.perks-section > div {
+    padding-left: 10px;
+}
+.perks-section strong {
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #2e2e2e;
+}
+.perk-icon img {
+    vertical-align: center;
+    padding-bottom: 10px;
+}
+.perks-section p {
+    padding: 10px 0 0 15px;
+}
+/* .icon-truck {
+    background-image: url('../img/truck.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.icon-return {
+    background-image: url('../img/return.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.icon-medal {
+    background-image: url('../img/medal.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.icon-percent {
+    background-image: url('../img/percent.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+} */
+
+
 @media screen and (min-width: 1200px) {
     .search-wrapper input{width: 300px}
     .my-basket a::before {
