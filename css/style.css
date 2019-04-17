@@ -1110,6 +1110,9 @@ address .mail {
         position: static;
         display: none;
     }
+    nav li {
+        border-bottom: 1px solid #fefefe;
+    }
     .navigation-lvl-2-cat:hover .navigation-lvl-3 {
         display: block;
     }
