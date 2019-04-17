@@ -8,7 +8,9 @@
 html {
     overflow-x: hidden;
 }
-
+img {
+    max-width: 100%;
+}
 .container {
     width: 970px;
     margin: 0 auto;
@@ -71,7 +73,7 @@ p {
 .col-sm-12 {width: 100%}
 }
 @media only screen and (max-width: 768px){
-.container {width: 100%;margin: 0 auto;}
+.container {width: 100%;margin: 0 auto; padding: 0 15px;}
 .col-xs-1 {width: 8.334%}
 .col-xs-2 {width: 16.667%}
 .col-xs-3 {width: 25%}
