@@ -875,6 +875,9 @@ del {
 .popular-posts article:last-child {
     padding: 0 0 20px 15px;
 }
+.slick-dots {
+    text-align: center;
+}
 footer {
     background-image: url('../img/bf-footer-dark.png'), url(../img/mountains.png);
     background-size: 100%;
