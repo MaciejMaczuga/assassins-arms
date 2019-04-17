@@ -1,35 +1,10 @@
 $(document).ready(function() {
-    // checkWindowWidth();
 
-    // toggle language menu
     $('.flag').on('click', function() {
         $('.lang-menu').toggleClass('hidden');
     });
 
-    // $(window).on("resize", function(){
-    //     checkWindowWidth();
-    // });
 
-    // function rwdDomRebuild(mobile, desktop) {
-    //     if (mobile) {
-    //     let $nav = $('nav').detach()
-    //     let $contact = $('.header-contact').detach()
-    //     let $myAcc = $('.lang-settings').detach()
-    //     let $langMenu = $('.my-account').detach()
-    //     }
-    //     if (desktop) {
-    //         $('.wrapper--bg-white').append($nav)
-    //     }
-    // }
-
-    // function checkWindowWidth(){
-    //     $vWidth = $(window).width();
-    //     if($vWidth < 768){
-    //         rwdDomRebuild('mobile')
-    //     } else {
-    //         rwdDomRebuild('desktop')
-    //     }
-    // }
 
 
     $('.slider-photos').slick({
