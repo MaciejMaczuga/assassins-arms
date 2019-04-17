@@ -93,7 +93,7 @@ header a:visited {
     max-height: 100%;
 }
 
-header ul {
+ ul {
     list-style: none;
 }
 
@@ -861,6 +861,25 @@ footer {
     font-family: Lato;
     font-size: 14px;
     font-weight: 400;
+    align-items: flex-start;
+}
+.footer-list li {
+    color: #e0dcdc;
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    padding: 0 0 18px 0;
+    transition: 0.3s
+}
+.footer-list li:hover {
+    color: #c32c12;
+}
+.footer-nav-section {
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: flex-start;
+    position: relative;
 }
 .footer-title {
     color: #ffffff;
@@ -870,6 +889,34 @@ footer {
     line-height: 18.85px;
     text-transform: uppercase;
     letter-spacing: 0.58px;
+    padding: 0 0 21px 0;
+}
+address {
+    color: #ffffff;
+    font-family: "Myriad Pro", sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    font-style: normal;
+    padding: 0 0 26px 0;
+}
+.contact img {
+    margin-right: 30px;
+}
+address .mail {
+    font-size: 19px;
+}
+.copyright {
+    background-color: #171717;
+    padding: 28px;
+    justify-content: center;
+}
+.footer-nav-section:not(:first-child)::before {
+    position: absolute;
+    content: "";
+    height: 189px;
+    width: 1px;
+    background-color: #3a3a3a;
+    left: -50px;
 }
 @media screen and (min-width: 1200px) {
     footer {
