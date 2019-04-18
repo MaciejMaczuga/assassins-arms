@@ -347,6 +347,7 @@ nav {
 
 .navigation-lvl-3 li>a {
     transition: 0.3s;
+    width: 100%;
 }
 
 .navigation-lvl-3 li>a:hover {
@@ -410,6 +411,11 @@ nav {
     max-width: 100%;
     max-height: 100%;
 }
+.slick-slide.slick-current.slick-active .slider-item {
+    border: 1px solid transparent; 
+    border-bottom: 3px solid #cf3622;
+    transition: 0.3s;
+}
 main > .container {
     padding: 45px 0;
 }
@@ -418,7 +424,7 @@ main > .container {
     padding: 0 10px 0 0;
     display: flex !important;
     padding-bottom: 38px;
-    transform: translateY(-18%)
+    transform: translateY(-7%)
 }
 .slick-product-slider::before {
     content: "Promocja";
@@ -491,12 +497,24 @@ main > .container {
 }
 .color-thumbnail {
     display: block;
-    width: 65px;
-    height: 65px;
     padding: 15px 0;
     margin: 5px;
+    height: 65px;
     text-align: center;
     border: 1px solid #ebebeb;
+    position: relative;
+}
+.color-thumbnail:hover {
+    border: 1px solid transparent;
+}
+ .color-thumbnail:hover::after {
+    content: '';
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 0px;
+    border-bottom: 3px solid #b62323;
 }
 .color-thumbnail img {
     max-width: 53px;
@@ -629,6 +647,7 @@ del {
 }
 .negotation-offer {
     justify-content: space-between;
+    align-items: flex-start;
 }
 .negotiate {
     flex-direction: column;
@@ -751,6 +770,9 @@ del {
     padding: 20px 0;
     border-bottom: 1px solid #e2e2e2;
 }
+.faq-anserw {
+    margin-bottom: 10px;
+}
 .faq-question:focus {
     outline: none;
 }
@@ -771,6 +793,7 @@ del {
 }
 .more-question {
     padding: 25px 0 20px;
+    justify-content: space-between;
 }
 .more-question .subsection-title {
     padding: 0;
@@ -882,6 +905,13 @@ del {
     color: #231f20;
     padding: 16px 0;
 }
+.popular-posts {
+    transition: 0.3s;
+}
+.popular-posts:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
 .popular-posts article a{
     flex-wrap: wrap;
 }
@@ -902,6 +932,12 @@ del {
 }
 .slick-dots {
     text-align: center;
+}
+.slick-slide {
+    outline: none;
+}
+.slick-list.draggable {
+    padding: 0;
 }
 footer {
     background-image: url('../img/bf-footer-dark.png'), url(../img/mountains.png);
@@ -1036,8 +1072,17 @@ address .mail {
     }
 }
 @media only screen and (max-width: 979px) {
+    .product-availability > div > div {
+        margin-right: 10px;
+    }
+    .ui-accordion-header-active {
+        padding-right: 10px;
+    }
     .popular-posts {
         flex-direction: column;
+    }
+    .counter-btn, .counter-form input {
+        width: 33%
     }
     .popular-posts article a {
         align-items: flex-start;
@@ -1046,7 +1091,8 @@ address .mail {
         left: 50%;
     }
     .slick-product-slider {
-        transform: translateY(0)
+        transform: translateY(0);
+        padding-bottom: 65px;
     }
     .navigation-lvl-1>li>a {
         padding: 23px 20px 22px;
@@ -1065,9 +1111,8 @@ address .mail {
     .lang-menu div {
         padding: 10px 10px 10px 20px;
     }
-    .color-thumbnail {
-        width: inherit;
-        height: inherit;
+    .item-photo {
+        margin-right: 10px;
     }
     .product-menu {
         margin-top: 0;
@@ -1079,6 +1124,7 @@ address .mail {
         padding: 12px 0px 10px 25px;
         flex-direction: column;
         align-items: flex-start;
+        background-position-y: 34%;
     }
     .my-basket a::before {
         top: -57px;
@@ -1106,39 +1152,65 @@ address .mail {
     #menu {
         display: none;
     }
+    .show-menu {
+        display: block;
+    }
     nav .navigation-lvl-3 {
         position: static;
         display: none;
     }
+    .navigation-lvl-1>li:first-child a {
+        padding-left: 20px;
+    }
     nav li {
-        border-bottom: 1px solid #fefefe;
+        border-bottom: 1px solid #777777;
     }
     .navigation-lvl-2-cat:hover .navigation-lvl-3 {
         display: block;
     }
-
+    .container.navigation-list.navigation-lvl-1 {
+        width: 100%;
+        padding: 0;
+    }
     nav ul li, nav li a {
         width: 100%;
     }
-
-    .show-menu {
-        display: block;
-    }
     .navigation-lvl-2 {
         position: inherit ;
+        width: 100%;
     }
     .navigation-lvl-2-cat {
         display: block;
     }
+
     .search-form {
-        padding-bottom: 15px;
+        padding-bottom: 0;
+        width: 100%;
+        border-bottom: 1px solid #2e2e2e;
+    }
+    .search-form input {
+        width: 85%;
     }
     .breadcrumbs {
         display: none;
     }
-    .my-basket a::before, .header-contact {
+    .my-basket a::before {
         display: none;
     }
+    /* .headercontac-contact */
+
+    .header-contact {
+        background-color: #2e2e2e;
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+    }
+    .header-contact a {
+        margin-right: 0;
+        padding: 15px 0;
+        font-size: 16px;
+    }
+
     .logo-wrapper {
         justify-content: center;
     }
@@ -1198,12 +1270,13 @@ address .mail {
     }
     .faq-anserw p {
         padding-top: 15px;
+        
     }
     .aside-banner {
-        align-items: center;    
+        align-items: center;
     }
     .blog {
-        padding: 25px 15px 45px;
+        padding: 80px 15px 45px;
     }
     .post-intro {
         padding: 27px 0 18px;
@@ -1218,14 +1291,18 @@ address .mail {
         padding-top: 18%
     }
     .footer-nav-section {
-        align-items: center;
+        align-items: flex-start;
+        padding-left: 10%;
     }
     .my-account {
         justify-content: center;
+        padding: 18px 0;
+        border-top: 1px solid #2e2e2e; 
     }
     .red-button-small {
         margin: 0;
     }
     .article-subject-details {
         padding-left: 0;
+    }
 }
