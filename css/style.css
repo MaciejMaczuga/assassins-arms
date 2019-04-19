@@ -360,28 +360,7 @@ nav {
     font-weight: 700;
     margin: 6px 0;
 }
-.show-menu {
-    text-decoration: none;
-    color: inherit;
-    background: #fff;
-    text-align: center;
-    padding: 35px;
-    width: 100%;
-    display: none;
-    border-width: 0 0 1px 0;
-    border-style: solid;
-    border-color: #d2d2d2;
-    background-image: url('../img/bars-solid.svg');
-    background-repeat: no-repeat;
-    background-size: 6%;
-    background-position: center;
-}
-.button-checkbox[type=checkbox] {
-    display: none;
-}
-.button-checkbox[type=checkbox]:checked ~ #menu {
-    display: block;
-}
+
 @media only screen and (max-width: 768px) {
 
 
@@ -1158,10 +1137,6 @@ address .mail {
     #menu {
         display: none;
     }
-    .show-menu {
-        display: block;
-        background-color: transparent;
-    }
     nav .navigation-lvl-3 {
         position: static;
         display: none;
@@ -1334,11 +1309,7 @@ address .mail {
     .article-subject-details {
         padding-left: 0;
     }
-    .hidden {
-        display: block;
-        opacity: 1;
-        height: auto;
-    }
+
     .lang-settings {
         display: none;
     }

@@ -4,7 +4,6 @@ $(document).ready(function() {
   $(window).resize(checkSize)
   function checkSize(){
     var size = $(document).width();
-    console.log('dupa');
     reorganize()
   }
 
@@ -16,12 +15,14 @@ $(document).ready(function() {
     var account = $('.my-account');
     var width = $(window).width();
 
-    if ( width > 768) {
+    if ( width >= 768) {
       search.insertAfter('.logo-wrapper');
       account.insertAfter('.lang-settings');
       $('.wrapper-black').append(contact);
       lang.insertAfter('.flag');
+      menu.css('display', 'flex');
     } else {
+      menu.css('display', 'none')
     menu.prepend(search);
     menu.append([account, contact, lang]);
     }
