@@ -29,14 +29,16 @@ $(document).ready(function() {
   reorganize();
 
 
+  // toggling mobile nav on click
+  var btnMenu = $('.mobileBtn')
+  btnMenu.click(function() {
+    $( ".navigation-lvl-1" ).slideToggle( "slow", function() {
+    });
+  });
+
     $('.flag').on('click', function() {
         $('.lang-menu').toggleClass('hidden');
     });
-
-
-    // $('.slick').on('beforeChange', function(event,slick,slide,nextSlide) {
-    //   $('.slider-nav-thumbnails').find('.slick-slide').removeClass('slick-current').eq(nextSlide).addClass('slick-current');
-    //   });
 
 
     $('.slider-photos').slick({
@@ -68,11 +70,11 @@ $(document).ready(function() {
     });
 
 
-    $( function() {
+    $(function faqAccordion() {
         $( "#accordion" ).accordion({
           collapsible: false
         });
-      } );
+      });
 
 
 

@@ -311,9 +311,7 @@ nav {
 .navigation-lvl-1>li>a:hover {
     border-bottom: 2px solid #dc363d;
 }
-.nav-hidden {
-    /* display: none; */
-}
+
 .navigation-lvl-1-cat:hover .navigation-lvl-2 {
     display: inline-block;
 }
@@ -1020,6 +1018,9 @@ address .mail {
 .footer-list img {
     padding-right: 15px;
 }
+.mobileBtn {
+    display: none;
+}
 @media screen and (min-width: 1200px) {
     footer {
         padding-top: 350px;
@@ -1106,6 +1107,7 @@ address .mail {
     }
     .my-basket a {
         flex-direction: column;
+        margin: 0 auto;
     }
     .lang-menu {
         z-index: 10;
@@ -1222,8 +1224,6 @@ address .mail {
     .my-basket a::before {
         display: none;
     }
-    /* .headercontac-contact */
-
     .header-contact {
         background-color: #2e2e2e;
         flex-direction: column;
@@ -1242,14 +1242,17 @@ address .mail {
     .logo-wrapper a img {
         padding: 10px 0 15px;
     }
-    .item-count {
-        display: none;
+
+    .item-count span {
+        color: #fff;
+        background-color: #d43a31;
     }
     .my-basket {
         justify-content: flex-end;
+        padding: 0;
     }
     .basket-links {
-        color: #231f20;
+        display: none;
     }
     .slick-dots li {
         display: inline-block;
@@ -1349,6 +1352,9 @@ address .mail {
         text-transform: uppercase;
         font-size: 12px;
     }
+    .middle-bar {
+        padding: 15px 10px 15px 10px;
+    }
     .lang-menu {
         position: static;
         padding: 5px 5px 10px 20px;
@@ -1365,5 +1371,34 @@ address .mail {
     }
     .wrapper--bg-white {
         background-color: transparent;
+    }
+    .filtered {
+        filter: brightness(50%) sepia(100) saturate(100) hue-rotate(25deg);
+
+    }
+    .header-backgrounds {
+        background-position: top right;
+        background-attachment: fixed;
+    }
+    .mobileBtn {
+        display: inline-block;
+ 
+    }
+    .mobileBtn > div {
+        background-color: #d43a31;
+        display: block;
+        height: 50px;
+        width: 35px;
+        clip-path: polygon(0 75%, 0 0, 100% 0, 100% 75%, 50% 95%);
+        padding-top: 5px;
+        margin: 0 auto;
+    }
+    .bars {
+        background-image: url('../img/bars-solid.svg');
+        height: 100%;
+        background-repeat: no-repeat;
+        width: 60%;
+        margin: 0 auto;
+        filter: invert(1) brightness(76%) sepia(100) saturate(0);
     }
 }
