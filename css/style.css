@@ -312,9 +312,9 @@ nav {
     border-bottom: 2px solid #dc363d;
 }
 .nav-hidden {
-    display: none;
+    /* display: none; */
 }
-.navigation-lvl-1-cat:hover .navigation-lvl-2.nav-hidden {
+.navigation-lvl-1-cat:hover .navigation-lvl-2 {
     display: inline-block;
 }
 
@@ -330,6 +330,8 @@ nav {
     width: 100%;
     align-items: flex-start;
     flex-wrap: wrap;
+    transition: 0.4s;
+    display: none;
 }
 
 .navigation-lvl-2-cat {
@@ -365,10 +367,12 @@ nav {
     color: inherit;
     background: #fff;
     text-align: center;
-    padding: 20px;
+    padding: 35px;
     width: 100%;
-    display: none;       
-    border: 1px solid #d2d2d2;
+    display: none;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: #d2d2d2;
     background-image: url('../img/bars-solid.svg');
     background-repeat: no-repeat;
     background-size: 6%;
@@ -1154,10 +1158,12 @@ address .mail {
     }
     .show-menu {
         display: block;
+        background-color: transparent;
     }
     nav .navigation-lvl-3 {
         position: static;
         display: none;
+        color: #231f20;
     }
     .navigation-lvl-1>li:first-child a {
         padding-left: 20px;
@@ -1172,21 +1178,40 @@ address .mail {
         width: 100%;
         padding: 0;
     }
+    .navigation-lvl-1 li:first-child a {
+        padding-left: 20px;
+    }
     nav ul li, nav li a {
         width: 100%;
+    }
+    .navigation-lvl-1-cat {
+        background-color: #2f2f2f;
+        color: #fff;
+    }
+    .navigation-lvl-2-cat a {
+        padding-left: 20px;
     }
     .navigation-lvl-2 {
         position: inherit ;
         width: 100%;
+        padding: 0;
     }
     .navigation-lvl-2-cat {
         display: block;
     }
-
+    .navigation-lvl-2-cat {
+        padding: 23px 0;
+    }
+    .navigation-lvl-3-cat a {
+        padding: 23px 20px;
+        margin: 0;
+        border: none;
+    }
     .search-form {
         padding-bottom: 0;
         width: 100%;
         border-bottom: 1px solid #2e2e2e;
+        background-color: #fff;
     }
     .search-form input {
         width: 85%;
@@ -1297,12 +1322,48 @@ address .mail {
     .my-account {
         justify-content: center;
         padding: 18px 0;
-        border-top: 1px solid #2e2e2e; 
+        border-top: 1px solid #2e2e2e;
+        font-size: 12px; 
     }
     .red-button-small {
         margin: 0;
     }
     .article-subject-details {
         padding-left: 0;
+    }
+    .hidden {
+        display: block;
+        opacity: 1;
+        height: auto;
+    }
+    .lang-settings {
+        display: none;
+    }
+    .lang-menu button {
+        height: 40px;
+        float: right;
+        padding: 5px 10px;
+        background-color: #2f2f2f;
+        width: 120px;
+        transition: 0.3s;
+        text-transform: uppercase;
+        font-size: 12px;
+    }
+    .lang-menu {
+        position: static;
+        padding: 5px 5px 10px 20px;
+        background-color: #e6e6e6;
+        width: 100%;
+        border: none;
+        border-radius: 0;
+    }
+    .lang-menu div {
+        display: inline-block;
+    }
+    .lang-menu input[type="radio"] {
+        padding: 100px;
+    }
+    .wrapper--bg-white {
+        background-color: transparent;
     }
 }

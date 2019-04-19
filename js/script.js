@@ -1,15 +1,30 @@
 $(document).ready(function() {
 // get all elements needed for mobile menu
 
+  $(window).resize(checkSize)
+  function checkSize(){
+    var size = $(document).width();
+    console.log('dupa');
+    reorganize()
+  }
 
   function reorganize() {
     var menu = $('#menu');
     var search = $('.search-wrapper');
     var lang = $('.lang-menu');
     var contact = $('.header-contact');
-    var account = $('.my-account')
+    var account = $('.my-account');
+    var width = $(window).width();
+
+    if ( width > 768) {
+      search.insertAfter('.logo-wrapper');
+      account.insertAfter('.lang-settings');
+      $('.wrapper-black').append(contact);
+      lang.insertAfter('.flag');
+    } else {
     menu.prepend(search);
     menu.append([account, contact, lang]);
+    }
   }
   reorganize();
 
